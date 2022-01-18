@@ -1,0 +1,513 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--website-theme: rgb(10, 10, 10);
+	--grid-theme:rgb(20, 20, 20);
+	--font-theme:white;
+	--footer-theme:rgb(44, 39, 40);
+	--button-theme:rgb(255, 53, 80);
+	--light-grey:rgb(97, 97, 97);
+}
+
+body {
+	font-size: 18px;
+	font-family: 'lato', sans-serif;
+	background-color: var(--website-theme);
+	color: var(--font-theme);
+	font-weight: 700;
+}
+.small-font {
+	color: var(--light-grey);
+}
+.big-font {
+	font-size: 2rem;
+}
+
+button {
+	background-color: var(--button-theme);
+	border: none;
+	border:2px solid var(--button-theme);
+	color: var(--font-theme);
+	font-size: 1.1rem;
+	cursor: pointer;
+	transition: .2s ease;
+}
+
+button:hover {
+	border:2px solid var(--button-theme);
+	background-color: var(--website-theme);
+}
+
+.product-container .product-price {
+	font-weight: 400;
+}
+
+.collection {
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 20px 0px;
+}
+
+.star-rating .fas {
+	color:rgb(245, 108, 67);
+}
+
+.star-rating span{
+	margin-left: 5%;
+}
+
+.container .camera img{
+	width: 80%;
+	animation:zooming 1s ease-in-out infinite alternate;
+}
+
+@keyframes zooming {
+	to {
+		transform: scale(1.12);
+	}
+}
+
+
+	/*============= mobile veiw======== */
+
+@media only screen and (max-width:688px) {
+	header {
+		margin-top: 10%;
+	}
+
+	.nav-bar, .half-width {
+		text-align: center;
+	}
+	.nav-links {
+		display: none;
+	}
+
+	main {
+		margin: 20% 10%;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		/* justify-content: center; */
+	}
+
+	.container .details {
+		margin: 20% 0;
+	}
+
+	.container .camera img{
+		width: 65%;
+	}
+
+	.container .title {
+		font-size: 2rem;
+	}
+
+	.container .title,
+	.container .about-us {
+		margin-bottom: 5%;
+	}
+
+	.container a button {
+		padding: 2%;
+		border-radius: 50px;
+	}
+	.product-container .collection-title{
+		text-align: center;
+		/* margin-bottom: 10%; */
+	}
+	.collection {
+		display: flex;
+		flex-direction: column;
+		padding: 6%;
+		background-color: var(--grid-theme);
+		margin-top: 10%;
+	}
+
+	.collection img {
+		width: 100%;
+	}
+
+
+	.product-detail {
+		margin: 15% 0;
+	}
+
+	.product-detail .big-font{
+		margin-bottom:5%;
+	}
+	.product-detail .small-font {
+		margin-top: 10%;
+	} 
+
+	.see-more {
+		text-align: center;
+		margin: 10% 0;
+	}
+
+	.membership-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.membership-container img {
+		width: 50%;
+		margin-bottom: 10%;
+	}
+
+	.membership-container .midium-font {
+		margin-top: 5%;
+	}
+
+	form {
+		margin-top: 10%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	#email, .join-btn {
+		padding: 4%;
+		margin: 1.2% 0;
+	}
+
+	footer, .footer-text{
+		text-align: center;
+		margin-bottom: 2%;
+	}
+
+	.footer-text {
+		margin-top: 2%;
+	}
+	}
+
+
+	/*============= tablet veiw======== */
+@media only screen and (min-width:688px) and (max-width:1100px) {
+
+	body {
+		font-size: 1.2rem;
+	}
+	header {
+		margin-top: 10%;
+	}
+
+	.nav-bar, .half-width {
+		text-align: center;
+	}
+	.nav-links {
+		display: none;
+	}
+
+	main {
+		margin: 20% 10%;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		/* justify-content: center; */
+	}
+
+	.container .details {
+		margin: 20% 0;
+	}
+
+	.container .camera img{
+		width: 80%;
+	}
+
+	.container .title {
+		font-size: 2rem;
+	}
+
+	.container .title,
+	.container .about-us {
+		margin-bottom: 5%;
+	}
+
+	.container a button {
+		padding: 2%;
+		border-radius: 50px;
+	}
+	.product-container .collection-title{
+		text-align: center;
+		margin-bottom: 10%;
+	}
+
+	.collections {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 40px;
+		grid-row-gap: 40px;
+	}
+	.collection {
+		display: flex;
+		flex-direction: column;
+		padding: 6%;
+		background-color: var(--grid-theme);
+	}
+
+	.collection img {
+		width: 100%;
+	}
+
+	/* edit */
+	.product-detail {
+		margin: 15% 0;
+	}
+
+	.product-detail .big-font{
+		margin-bottom:5%;
+	}
+	.product-detail .small-font {
+		margin-top: 10%;
+	} 
+
+	.see-more {
+		text-align: center;
+		margin: 10% 0;
+	}
+
+	.membership-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.membership-container img {
+		width: 40%;
+		margin-bottom: 10%;
+	}
+
+	.membership-container .midium-font {
+		margin-top: 5%;
+	}
+
+	form {
+		margin-top: 10%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	#email, .join-btn {
+		padding: 4%;
+		margin: 1.2% 0;
+	}
+
+	footer, .footer-text{
+		text-align: center;
+		margin-bottom: 2%;
+	}
+
+	.footer-text {
+		margin-top: 2%;
+	}
+}
+
+@media only screen and (min-width:1101px) {
+
+	body {
+		font-size: 1.2rem;
+	}
+	header {
+		margin: 5% 10% 10% 10%;
+	}
+
+	nav{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	nav h3{
+		font-size: 2rem;
+	}
+
+	.container .details .title {
+		font-size:4rem;
+	}
+	
+	.nav-links ul {
+		display: flex;
+	}
+	
+	.nav-links ul li {
+		list-style-type: none;
+		margin-right: 40px;
+	}
+	
+	.nav-links a {
+		color: var(--font-theme);
+		text-decoration: none;
+	}
+
+
+	/* ----for mobile and tab view only-----
+	.nav-bar, .half-width {
+		text-align: center;
+	} */
+
+	/* .nav-links {
+		display: none;
+	} */
+
+	main {
+		margin: 0 10%;
+	}
+
+	.container {
+		display: flex;
+		align-items: center;
+	}
+	
+	.container .half-width {
+		width: 50%;
+	}
+
+	.half-width p {
+		width: 70%;
+	}
+
+	/* .container .details {
+		margin: 20% 0;
+	} */
+
+	.container .camera img{
+		position: relative;
+		left:10%;
+		width: 80%;
+		animation-play-state: paused;
+	}
+
+	.container:hover .camera img{
+		animation-play-state: running;
+	}
+
+	.container .title {
+		font-size: 2rem;
+	}
+
+	.container .title,
+	.container .about-us {
+		margin-bottom: 5%;
+	}
+
+	.container a button {
+		padding: 2%;
+		border-radius: 50px;
+	}
+	.product-container .collection-title{
+		text-align: center;
+		margin: 10% 0 5%;
+		font-size: 2rem;
+	}
+
+	.collections {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 40px;
+		grid-row-gap: 40px;
+	}
+	.collection {
+		display: flex;
+		flex-direction: column;
+		padding: 6%;
+		background-color: var(--grid-theme);
+		border-radius: 10px;
+	}
+	.collection .product-banner {
+		overflow: hidden;
+	}
+	.collection .product-banner img{
+		transition: .5s ease-in-out;
+	}
+	.collection:hover .product-banner img{
+		transform: scale(1.2);
+	}
+
+	.collection img {
+		width: 100%;
+	}
+
+	/* edit */
+	.product-detail {
+		margin: 15% 0;
+	}
+
+	.product-detail .big-font{
+		margin-bottom:5%;
+	}
+	.product-detail .small-font {
+		margin-top: 10%;
+	} 
+
+	.see-more {
+		text-align: end;
+		margin: 10% 0;
+	}
+
+	.membership-container {
+		display: flex;
+		background-color: var(--grid-theme);
+		align-items: center;
+		margin: 0 8%;
+	}
+	
+	.membership-container .half-width {
+		width: 50%;
+		display: flex;
+		justify-content: center;
+	}
+
+	.membership-container .signup-container {
+		flex-direction: column;
+	}
+
+	.membership-container img {
+		width: 60%;
+		margin: 5% 0;
+	}
+
+	.membership-container .premium-title {
+		margin-bottom: 5%;
+	}
+
+	form {
+		margin-top: 10%;
+		width: 70%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	#email, .join-btn {
+		padding: 2%;
+		margin: 1.2% 0;
+	}
+
+	
+	footer{
+		display: flex;
+		flex-direction: column;
+		background-color: var(--footer-theme);
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		height: 16em;
+		margin-top: 5%;
+	}
+	
+	.footer-text {
+		margin-bottom: 8%;
+	}
+
+	.icons img {
+		margin: 0 3%;
+	}
+}
+
+
